@@ -5,7 +5,7 @@
 ** Login   <troncy_l@epitech.net>
 ** 
 ** Started on  Thu Mar 24 13:22:27 2016 Lucas Troncy
-** Last update Thu Mar 24 13:42:13 2016 Lucas Troncy
+** Last update Fri Mar 25 15:06:55 2016 Lucas Troncy
 */
 
 #include <unistd.h>
@@ -24,6 +24,15 @@ void	my_putstr(int fd, char *s)
   write(fd, s, my_strlen(s));
 }
 
+void	my_putnstr(int fd, char *s, size_t n)
+{
+  int	i;
+
+  i = -1;
+  while (s[++i] != 0 && i < n)
+    write(fd, &s[i], 1);
+}
+
 int	my_strncmp(char *s, char *a, int i)
 {
   int	n;
@@ -36,4 +45,13 @@ int	my_strncmp(char *s, char *a, int i)
       ++n;
     }
   return (0);
+}
+
+void	my_bzero(void *s, size_t n)
+{
+  char	*_s;
+
+  _s = s;
+  while (n--)
+    *_s++ = 0;
 }

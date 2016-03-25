@@ -5,7 +5,7 @@
 ** Login   <troncy_l@epitech.net>
 ** 
 ** Started on  Thu Mar 24 13:01:43 2016 Lucas Troncy
-** Last update Thu Mar 24 16:41:28 2016 Lucas Troncy
+** Last update Fri Mar 25 15:10:13 2016 Lucas Troncy
 */
 
 #ifndef MP3TAG_H_
@@ -62,16 +62,29 @@ int	get_tag(int);
 void	disp_tag(t_tag);
 
 /*
+** set_tag.c we set the tag here
+*/
+int	set_tag(int);
+int	ask_tag(t_tag *);
+int	write_tag(int, t_tag *);
+
+/*
 ** tool/lib.c minimal libmy
 */
 int	my_strlen(char *);
 void	my_putstr(int, char *);
+void	my_putnstr(int, char *, size_t);
 int	my_strncmp(char *, char *, int);
+void	my_bzero(void *, size_t);
+
+/*
+** tools/my_cpy.c
+*/
+char	*my_strncpy(char *, char *, int);
 
 /*
 ** args.c parameters check
 */
 int	get_args(char **);
-
 
 #endif /* !MP3TAG_H_ */

@@ -5,15 +5,16 @@
 ## Login   <troncy_l@epitech.net>
 ## 
 ## Started on  Thu Mar 24 14:29:59 2016 Lucas Troncy
-## Last update Thu Mar 24 16:55:04 2016 Lucas Troncy
+## Last update Fri Mar 25 15:44:03 2016 Lucas Troncy
 ##
 
-SRCS	=	src/main.c	\
-		src/error.c	\
-		src/is_tag.c	\
-		src/args.c	\
-		src/tools/lib.c	\
-		src/set_tag.c	\
+SRCS	=	src/main.c		\
+		src/error.c		\
+		src/is_tag.c		\
+		src/args.c		\
+		src/tools/lib.c		\
+		src/tools/my_cpy.c	\
+		src/set_tag.c		\
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -30,6 +31,6 @@ clean:
 		rm -f $(OBJS)
 
 fclean:		clean
-		rm -r $(NAME)
+		rm -f $(NAME)
 
 re:		fclean all

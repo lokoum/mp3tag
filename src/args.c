@@ -5,7 +5,7 @@
 ** Login   <troncy_l@epitech.net>
 ** 
 ** Started on  Thu Mar 24 14:12:16 2016 Lucas Troncy
-** Last update Thu Mar 24 14:43:13 2016 Lucas Troncy
+** Last update Fri Mar 25 13:53:15 2016 Lucas Troncy
 */
 
 #include "mp3tag.h"
@@ -26,6 +26,12 @@ int	get_args(char **argv)
     }
   else if (my_strncmp(argv[2], "--set-tag", 9) == 0)
     {
+      if ((fd = open(argv[1], O_RDWR)) == -1)
+	{
+	  my_putstr(2, "Cannot open the file !\n");
+	  return (1);
+	}
+      set_tag(fd);
       return (0);
     }
   else
