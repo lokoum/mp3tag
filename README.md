@@ -22,7 +22,7 @@ year: 2011
 comment: Best song Ever
 the tag has been updated !
 
-$ ./mp3tag ~/Music/sail.mp3 --disp-tag
+$ ./mp3tag sail.mp3 --disp-tag
 title: Sail
 artist: Awolnation
 album: Back from Earth
