@@ -8,7 +8,7 @@ This is just a simple program to display and set MP3 metada, it is very simple t
 
 ##Example
 
-<code>
+```
 $ make; make clean
 
 $ ./mp3tag sail.mp3 --disp-tag
@@ -28,4 +28,4 @@ artist: Awolnation
 album: Back from Earth
 year: 2011
 comment: Best song Ever
-</code>
+```
